@@ -1,3 +1,0 @@
-/usr/local/lib/lv2/ringModulator.lv2/libringModulator.so
-/usr/local/lib/lv2/ringModulator.lv2/ringModulator.ttl
-/usr/local/lib/lv2/ringModulator.lv2/manifest.ttl
