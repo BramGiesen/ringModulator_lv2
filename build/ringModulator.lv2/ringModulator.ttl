@@ -1,0 +1,114 @@
+@prefix doap:  <http://usefulinc.com/ns/doap#> .
+@prefix lv2:   <http://lv2plug.in/ns/lv2core#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix units: <http://lv2plug.in/ns/extensions/units#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<https://github.com/BramGiesen#me>
+        a foaf:Person ;
+        foaf:name "Bram Giesen" ;
+        foaf:mbox <mailto:info@bramgiesen.com> ;
+        foaf:homepage <https://github.com/BramGiesen> .
+
+<https://github.com/BramGiesen/ringModulator>
+	a lv2:Plugin ;
+	a doap:Project ;
+	lv2:minorVersion 1 ;
+	lv2:microVersion 0 ;
+	doap:name "ringModulator" ,
+		"ringModulator"@de ;
+	doap:license <https://opensource.org/licenses/ISC> ;
+	doap:maintainer <https://github.com/jkbd#me> ;
+	lv2:optionalFeature lv2:hardRTCapable ;
+	lv2:port [
+		a lv2:AudioPort ,
+			lv2:InputPort ;
+		lv2:index 0 ;
+		lv2:symbol "in1" ;
+		lv2:name "In1" ,
+			"In1"@de
+	] , [
+		a lv2:AudioPort ,
+			lv2:InputPort ;
+		lv2:index 1 ;
+		lv2:symbol "in2" ;
+		lv2:name "In2" ,
+			"In2"@de
+    ] , [
+  		a lv2:AudioPort ,
+  			lv2:OutputPort ;
+  		lv2:index 2 ;
+  		lv2:symbol "out1" ;
+  		lv2:name "Out1",
+  			"Out1"@de
+  	] , [
+  		a lv2:AudioPort ,
+  			lv2:OutputPort ;
+  		lv2:index 3 ;
+  		lv2:symbol "out2" ;
+  		lv2:name "Out2" ,
+  			"Out2"@de
+  	] , [
+		a lv2:InputPort ,
+			lv2:ControlPort ;
+		lv2:index 4 ;
+		lv2:symbol "freq" ;
+		lv2:name "Frequency" ,
+			"Frequenz"@de ;
+		lv2:default 440.0 ;
+		lv2:minimum 220.0 ;
+		lv2:maximum 880.0 ;
+		units:unit units:hz ;
+		lv2:scalePoint [
+			rdfs:label "440" ;
+			rdf:value 440.0
+		] , [
+		  	rdfs:label "220" ;
+			rdf:value 220.0
+		] , [
+			rdfs:label "880" ;
+			rdf:value 880.0
+		]
+	] , [
+		a lv2:InputPort ,
+			lv2:ControlPort ;
+		lv2:index 5 ;
+		lv2:symbol "lfoSpeed" ;
+		lv2:name "LfoSpeed" ,
+			"LfoSpeed"@de ;
+		lv2:default 0;
+		lv2:minimum 0;
+		lv2:maximum 5;
+		lv2:scalePoint [
+			rdfs:label "0" ;
+			rdf:value 0
+		] , [
+		  	rdfs:label "0" ;
+			rdf:value 0
+		] , [
+			rdfs:label "5" ;
+			rdf:value 5
+		]
+	] , [
+		a lv2:InputPort ,
+			lv2:ControlPort ;
+		lv2:index 6 ;
+		lv2:symbol "modDepth" ;
+		lv2:name "ModDepth" ,
+			"ModDepth"@de ;
+		lv2:default 10.0 ;
+		lv2:minimum 0.0 ;
+		lv2:maximum 880.0 ;
+		units:unit units:hz ;
+		lv2:scalePoint [
+			rdfs:label "10" ;
+			rdf:value 10.0
+		] , [
+		  	rdfs:label "0" ;
+			rdf:value 0.0
+		] , [
+			rdfs:label "880" ;
+			rdf:value 880.0
+		]
+	] .

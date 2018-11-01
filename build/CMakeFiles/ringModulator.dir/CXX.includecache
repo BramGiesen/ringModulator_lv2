@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/bramgiesen/Programming/MOD/plugins/ringModulator.lv2/src/audioProcess.cpp
+audioProcess.h
+/home/bramgiesen/Programming/MOD/plugins/ringModulator.lv2/src/audioProcess.h
+iostream
+-
+
+/home/bramgiesen/Programming/MOD/plugins/ringModulator.lv2/src/audioProcess.h
+cmath
+-
+lv2.h
+/home/bramgiesen/Programming/MOD/plugins/ringModulator.lv2/src/lv2.h
+oscillator.h
+/home/bramgiesen/Programming/MOD/plugins/ringModulator.lv2/src/oscillator.h
+randomGen.h
+/home/bramgiesen/Programming/MOD/plugins/ringModulator.lv2/src/randomGen.h
+sineWave.h
+/home/bramgiesen/Programming/MOD/plugins/ringModulator.lv2/src/sineWave.h
+
+/home/bramgiesen/Programming/MOD/plugins/ringModulator.lv2/src/oscillator.h
+iostream
+-
+math.h
+/home/bramgiesen/Programming/MOD/plugins/ringModulator.lv2/src/math.h
+
+/home/bramgiesen/Programming/MOD/plugins/ringModulator.lv2/src/randomGen.h
+cstdlib
+-
+
+/home/bramgiesen/Programming/MOD/plugins/ringModulator.lv2/src/sineWave.h
+oscillator.h
+/home/bramgiesen/Programming/MOD/plugins/ringModulator.lv2/src/oscillator.h
+

@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -g  -shared  -o ringModulator.lv2/libringModulator.so CMakeFiles/ringModulator.dir/src/audioProcess.cpp.o 
